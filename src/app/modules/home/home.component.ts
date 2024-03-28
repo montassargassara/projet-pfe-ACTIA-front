@@ -46,11 +46,12 @@ export class HomeComponent implements OnInit {
   }
   downloadFile(fileType: 'pdf' | 'excel'): void {
     const excelFileUrl = 'https://mohetn-my.sharepoint.com/personal/gassaramontasar_escs_u-sfax_tn/_layouts/15/download.aspx?sourcedoc=%7BE839593C-0BA2-4814-ACFD-D7E137DD309B%7D&file=Livre.xlsx';
-    const pdfFileUrl = 'URL_TO_PDF';
-
+  
     if (fileType === 'excel') {
       this.fileDownloadService.downloadFile(excelFileUrl, 'Livre.xlsx');
     } else if (fileType === 'pdf') {
+      //Comment out or remove this code if you don't have a PDF URL yet
+      const pdfFileUrl = 'https://mohetn-my.sharepoint.com/:x:/r/personal/gassaramontasar_escs_u-sfax_tn/_layouts/15/Doc.aspx?sourcedoc=%7BE839593C-0BA2-4814-ACFD-D7E137DD309B%7D&file=Livre.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&web=1';
       this.fileDownloadService.downloadFile(pdfFileUrl, 'Livre.pdf');
     }
   }
