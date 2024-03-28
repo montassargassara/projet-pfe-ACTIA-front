@@ -1,0 +1,53 @@
+<div id="content">
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/images/layout_img/g1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/layout_img/g10.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/layout_img/g12.jpg" class="d-block w-100" alt="...">
+        </div>
+        <!-- Ajout de nouveaux carousel-items ici -->
+        <div class="carousel-item">
+          <img src="assets/images/layout_img/team1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/layout_img/team2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <!-- ... -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <br>
+  <mat-divider></mat-divider>
+  <div class="container">
+    <div class="panel post">
+      <a href="javascript:void();"><span>8 </span>Posts</a>
+    </div>
+    <div class="panel users">
+      <a href="javascript:void();"><span>{{ teamCount }}</span> Teams</a>
+    </div> 
+    <div class="panel page">
+      <a href="javascript:void();"><span>5 </span>Pages</a>
+    </div>
+    <div class="panel user">
+      <a href="javascript:void();"><span>{{ employeeCount }}</span> Employees</a>
+    </div> 
+</div>
+<mat-divider></mat-divider>
+<app-teams></app-teams>
+<mat-divider></mat-divider>
+<button (click)="downloadFile('pdf')">Download as PDF</button>
+<button (click)="downloadFile('excel')">Download as Excel</button>
+<iframe src="https://mohetn-my.sharepoint.com/:e:/r/personal/gassaramontasar_escs_u-sfax_tn/_layouts/15/Doc.aspx?sourcedoc=%7BE839593C-0BA2-4814-ACFD-D7E137DD309B%7D&file=Livre.xlsx&action=embedview" width="100%" height="600px" frameborder="0"></iframe>
